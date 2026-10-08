@@ -13,9 +13,9 @@ description: Build and work with the Filament Pirsch plugin — settings page an
 
 ## Package Overview
 
-- **Package**: `jeffersongoncalves/filament-pirsch` (branch `1.x`)
+- **Package**: `jeffersongoncalves/filament-pirsch` (branch `2.x`)
 - **Namespace**: `JeffersonGoncalves\Filament\Pirsch`
-- **Dependencies**: `jeffersongoncalves/filament-analytics-core:^1.0`, `jeffersongoncalves/laravel-pirsch:^1.0`
+- **Dependencies**: `jeffersongoncalves/filament-analytics-core:^2.0`, `jeffersongoncalves/laravel-pirsch:^1.0`
 
 ## Setup
 

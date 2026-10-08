@@ -2,24 +2,24 @@
 
 namespace JeffersonGoncalves\Filament\Pirsch\Pages;
 
-use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
 use Filament\Pages\SettingsPage;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
 use JeffersonGoncalves\Pirsch\Settings\PirschSettings;
 
 class ManagePirschSettings extends SettingsPage
 {
     protected static string $settings = PirschSettings::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-chart-bar';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-chart-bar';
 
     public static function getNavigationLabel(): string
     {
         return __('filament-pirsch::pages.navigation_label');
     }
 
-    public static function getNavigationGroup(): ?string
+    public static function getNavigationGroup(): string|\UnitEnum|null
     {
         return __('filament-pirsch::pages.navigation_group');
     }
@@ -29,9 +29,10 @@ class ManagePirschSettings extends SettingsPage
         return __('filament-pirsch::pages.title');
     }
 
-    public function form(Form $form): Form
+    public function form(Schema $schema): Schema
     {
-        return $form
+        return $schema
+            ->columns(null)
             ->schema([
                 Section::make(__('filament-pirsch::pages.sections.pirsch.heading'))
                     ->description(__('filament-pirsch::pages.sections.pirsch.description'))
