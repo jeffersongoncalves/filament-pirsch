@@ -6,6 +6,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Pages\SettingsPage;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
+use JeffersonGoncalves\FilamentAnalyticsCore\AbstractAnalyticsPlugin;
 use JeffersonGoncalves\Pirsch\Settings\PirschSettings;
 
 class ManagePirschSettings extends SettingsPage
@@ -21,7 +22,7 @@ class ManagePirschSettings extends SettingsPage
 
     public static function getNavigationGroup(): string|\UnitEnum|null
     {
-        return __('filament-pirsch::pages.navigation_group');
+        return AbstractAnalyticsPlugin::navigationGroupFor('filament-pirsch') ?? __('filament-pirsch::pages.navigation_group');
     }
 
     public function getTitle(): string
